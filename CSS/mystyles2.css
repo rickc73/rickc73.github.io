@@ -263,6 +263,10 @@ form {
     margin-bottom: 10px;
     text-align: center;
     justify-content: space-evenly;
+    /* Animation for page load */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     
 
 }
