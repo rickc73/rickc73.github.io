@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+<style>
+
+/* Hamburger Navbar 
+
+*/
+
+.container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-section {
+    margin-right: 10px;
+    float: left;
+    font-size: 86px;
+    font-family: 'Roboto', sans-serif;
+    position: left;
+    letter-spacing: 8px;
+    font-weight: 300; /* Set the font weight to light */
+}
+
+.home-section strong {
+    font-weight: bold;
+}
+
+
+
+.circular-image img {
+    border-radius: 50%;
+    float: right;
+    border: 8px solid lightskyblue; /* Add this line to create a blue border */
+    padding: 0px; /* Add padding to adjust the spacing between the image and the border */
+    /* opacity: 0.9; */
+    filter: grayscale(50%); 
+    /* Animation for page load */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin-top: 150px;
+    margin-right: 100px;
+}
+  
+.content {
+    clear: both; /* Add this line to clear the floats */
+    padding-top: 20px; /* Adjust the spacing as needed */
+    
+  }
+
+p{
+    color: #ffffff;
+    font-size: 24px;
+    /* Animation for page load */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    float: left;
+}
+h1{
+    text-transform: uppercase;
+    padding-top: 10%;
+    color: #ffffff;
+    font-size: 86px;
+    font-family: 'Roboto', sans-serif;
+    position: left;
+    float: left;
+    letter-spacing: 4;
+    /* Animation for page load */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+h2{
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+     /* Animation for page load */
+     animation: fadeInAnimation ease 3s;
+     animation-iteration-count: 1;
+     animation-fill-mode: forwards;
+    
+}
+dl{
+    color: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    background: #000000;
+    background-image: url("../Images/background.jpg");
+    font-family: sans-serif;
+    
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background: #1a1a1a;
+    margin-bottom: 100px;
+}
+
+.link-group{
+    list-style: none;
+    display: flex;
+}
+
+.link a{
+    color: #ffffff;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: .5s;
+    font-size: 20px;
+}
+
+.link a:hover, .link.active a{
+    opacity: 1;
+} 
+
+img{
+    /* margin-left: 100px; */
+    /* margin-top: 150px; */
+    padding: 10%;
+    float: left;
+    width: 250px;
+    opacity: 1;
+    max-width: 100%; /* Add this line to scale down the image */
+    padding: 10px; /* Adjust the padding as needed */
+    opacity: 1;
+    
+      
+    
+} 
+
+a, ul {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+     /* Animation for page load */
+     animation: fadeInAnimation ease 3s;
+     animation-iteration-count: 1;
+     animation-fill-mode: forwards;
+     float: left;
+     margin-left: 100px;
+}
+
+.circular-image{
+    border-radius: 50%;    
+}
+
+footer {
+    padding-top: 15%;
+    float: right;
+    margin-top: 10px;
+}
+
+
+.CV {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    font-size: 24px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    transition-duration: 0.4s;
+    background: rgba(0, 0, 0, 0.5);
+}
+.CV:hover {
+    background-color: grey;
+    color: #ffffff;
+}
+
+
+.skills-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 60px 60px 60px; /*Make the grid smaller than the container*/
+    gap: 5px;
+    background: #000000;
+    padding: 1px;
+    border: 2px solid skyblue;
+    padding: 0px;
+    opacity: 0.1;
+     /* Animation for page load */
+     animation: fadeInAnimation ease 3s;
+     animation-iteration-count: 1;
+     animation-fill-mode: forwards;
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  .skills-container > div {
+    /* background-color: rgba(255, 255, 255, 0.8);  */
+    text-align: center;
+    padding: 5px 0;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .skills-container > div > img {
+    max-width: 150%;
+    max-height: 150%;
+    
+  }
+
+.project-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 200px 200px; /*Make the grid smaller than the container*/
+    gap: 5px;
+    background: #000000;
+    padding: 1px;
+    border: 2px solid skyblue;
+    padding: 0px;
+    opacity: 0.1;
+     /* Animation for page load */
+     animation: fadeInAnimation ease 3s;
+     animation-iteration-count: 1;
+     animation-fill-mode: forwards;
+    width: 75%;
+    margin: 0 auto;
+    color: #ffffff;
+
+}
+
+form {
+    color: #ffffff;
+    border: 4px solid skyblue;
+    padding: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: space-evenly;
+    
+
+}
+
+</style>

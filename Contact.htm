@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Rick Caldwell</title>
+			<meta description="This page acts as a portofolio page for my proffesional development">
+			<meta charset="UTF-8">
+			<link rel=stylesheet type="text/css" href="CSS/normalize.css">
+            <link rel=stylesheet type="text/css" href="CSS/main.css">
+            <link rel=stylesheet type="text/css" href="CSS/mystyles2.css">
+			
+			<script src="https://smtpjs.com/v3/smtp.js"> </script>
+			<script src="script.js"></script>
+			<!-- <link rel="stylesheet" type="text/css" href="../CSS/Mystyles.css"> -->
+	</head>
+	<body>
+	<article>
+		
+
+		<!-- navbar -->
+<nav class="navbar">
+    <ul class="link-group">
+        <li class="link"><a href="../My Website/Home2.htm">home</a></li>
+        <li class="link"><a href="../My Website/Projects.htm">projects</a></li>
+        <li class="link"><a href="../My Website/About2.htm">about</a></li>
+        <li class="link active"><a href="#">contact</a></li>
+    </ul>
+</nav>
+
+<!-- home section -->
+<div class="container">
+	<h1 class="home-section">Contact Me</strong></h1>
+	<br>
+	<br>
+</div>
+<div class="content">
+
+	<form id="form" style="float:left; position: relative;">
+		<div>
+			<label for="subject">Subject:</label>
+			<select id="subject" name="subject">
+				<option value="general inquiry">General Inquiry</option>
+				<option value="employment">Employment</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<label for="fname">first name:</label>
+			<input type="text" id="fname" name="fname" placeholder="John" required>
+		</div>
+		<br>
+		<div>
+			<label for="lname">last name:</label>
+			<input type="text" id="lname" name="lname" placeholder="Smith" required>
+		</div>
+		<br>
+		<div>
+			<label for="email">email:</label>
+			<input type="email" id="email" name="email" placeholder="email@mail.com" required>
+		</div>
+		<br>
+		<div>
+			<label for="message">message:</label>
+			<input type="text" id="message" name="message" placeholder="Enter your message here."  style="height: 200px; width: 400px;" required>
+		</div>
+
+		<div>
+			<input type="reset">
+		</div>
+		<br>
+		<div>
+			<input type="submit">
+		</div>
+	</form>
+
+	<ul>
+	<a class="container" href="https://www.linkedin.com/in/rickcaldwell73" title="LinkedIn" target="blank">LinkedIn</a><br>
+	<br>
+	<a href="https://github.com/rickc73" title="Github" target="blank">GitHub</a><br>
+	<br>
+	<a href="mailto:rcaldwell@gmx.co.uk" title="send me an Email" target="blank">Send me an Email</a> - rcaldwell@gmx.co.uk<br>
+
+
+</ul></div>
+	
+
+	</article>		
+	</body>
+	<br>
+	<br>
+	<br>
+
+	<script>
+
+		//event listener for form submit
+	var form = document.getElementById('form')
+
+	form.addEventListener('submit', function(event){
+			event.preventDefault(); //prevents form from autosubmitting
+
+			var firstname = document.getElementById('fname').value
+			var lastname = document.getElementById('lname').value
+			var email = document.getElementById('email').value
+			var message = document.getElementById('message').value
+
+			console.log(firstname)
+			console.log(lastname)
+			console.log(email)
+			console.log(message)
+		
+			
+
+			
+
+				// combine form into structured HTML format
+		let ebody = `
+		<b>Name: </b>${firstname} ${lastname}
+		<br>
+		<b>Email: </b>${email}
+		<br>
+		<b>Message: </b>${message}
+		<br>
+		`
+
+			//code to send form to email address..
+	
+		Email.send({
+    	SecureToken : "c3cf117c-6e44-4be3-8265-2906fa0618ad",
+   		To : 'rick7388@googlemail.com',
+    	From : "rick7388@googlemail.com",
+    	Subject : "New Message from " + firstname,
+    	Body : ebody
+		}).then(function(message) {
+  		alert(message);
+		});
+	});
+	</script>
+
+	<footer>
+				<p> Richard Caldwell &copy;</p>
+	</footer>
+</html>
